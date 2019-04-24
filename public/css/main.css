@@ -7763,6 +7763,11 @@ select.form-control:focus::-ms-value {
   width: 1em;
 }
 
+.icon-pause {
+  font-size: 50rem;
+  width: 0.875em;
+}
+
 .icon-play {
   font-size: 2.9rem;
   width: 0.93103em;
@@ -9853,6 +9858,14 @@ Main Components
   margin-bottom: 40px;
 }
 
+.s-banner__play:not(.play) .icon-pause {
+  display: none;
+}
+
+.s-banner__play.play .icon-play {
+  display: none;
+}
+
 .s-banner__play audio {
   z-index: 100;
   opacity: 0;
@@ -10503,7 +10516,7 @@ Main Components
   margin-left: 10px;
 }
 
-.modal-dialog {
+.modal-dialog:not(.modal-xl) {
   max-width: 684px !important;
 }
 
@@ -11098,6 +11111,25 @@ a {
   position: absolute;
   left: 0;
   top: 0.125rem;
+}
+
+.modal-xl {
+  max-width: 1170px !important;
+}
+
+.modal-xl .modal-content {
+  display: block;
+  position: relative;
+  height: 0;
+  padding-bottom: 56.15385%;
+}
+
+.modal-xl video {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100% !important;
+  height: 100% !important;
 }/*==========  Mobile First  ==========*//*==========  Desktop First  ==========*//* Large Devices, Wide Screens *//* Medium Devices, Desktops *//* Small Devices, Tablets *//* Extra Small Devices, Phones *//* Custom, iPhone Retina */@font-face {
   font-family:Montserrat;font-style:normal;font-weight:normal;src:url("../fonts/Montserrat-Regular/Montserrat-Regular.woff2") format("woff2"), url("../fonts/Montserrat-Regular/Montserrat-Regular.woff") format("woff"), url("../fonts/Montserrat-Regular/Montserrat-Regular.ttf") format("truetype");
 }

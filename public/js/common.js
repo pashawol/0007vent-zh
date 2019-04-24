@@ -293,9 +293,9 @@ jQuery(document).ready(function ($) {
 			mainClass: 'mfp-with-zoom mfp-img-mobile',
 			image: {
 				verticalFit: true,
-				// titleSrc: function(item) {
-				//   return item.el.attr('title') + ' &middot; <a class="image-source-link" href="'+item.el.attr('data-source')+'" target="_blank">image source</a>';
-				// }
+				titleSrc: function(item) {
+				  return item.el.data('text') ;
+				}
 			},
 			gallery: {
 				enabled: true
@@ -488,4 +488,21 @@ var galleryThumb = new Swiper('.swiper-container-text', {
 				alwaysShowScrollbar: 2
 			});
 		})
+
+		$('#modal-video').on('show.bs.modal', function (e) {
+			// do something...
+			$("#bgvid").get(0).play();
+		});
+		
+		$('#modal-video').on('hide.bs.modal', function (e) {
+			// do something...
+			$("#bgvid").get(0).pause();
+		});
+
+		$(".link-foto-js").click(function (e) {
+			e.preventDefault();
+			
+			$(".slick-active .s-cards__img-wrap").click();
+		})
+
 		})
